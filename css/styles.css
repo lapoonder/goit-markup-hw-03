@@ -37,8 +37,14 @@ a {
 }
 
 .visually-hidden {
-  position: fixed;
-  transform: scale(0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 body {
@@ -59,8 +65,8 @@ body {
 
 .container {
   max-width: 1158px;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -80,14 +86,13 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 80px;
+  align-items: center;
 }
 
 .site-navigation ul {
   display: flex;
   flex-direction: row;
   gap: 40px;
-  align-items: center;
 }
 
 .logo {
@@ -99,6 +104,7 @@ body {
   text-transform: uppercase;
   color: #4d5ae5;
   padding: 24px 0;
+  margin-right: 76px;
 }
 
 .color-text-logo {
@@ -147,24 +153,28 @@ main {
 
 .section-with-main-header {
   background: #2e2f42;
+  padding: 188px 0;
+}
+
+.first-section-content {
+  text-align: center;
 }
 
 .main-header {
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  text-align: center;
   color: #ffffff;
   letter-spacing: 0.02em;
-  padding: 68px 331px 48px;
-}
-
-.first-section-content {
-  text-align: center;
-  padding-bottom: 60px;
+  max-width: 496px;
+  margin: 0 auto;
+  padding-bottom: 48px;
 }
 
 .order-service-button {
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
   background: #4d5ae5;
   border-color: #4d5ae5;
   color: #ffffff;
@@ -172,7 +182,7 @@ main {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
-  border-width: 0;
+  border: none;
   border-radius: 4px;
   padding: 16px 32px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -195,14 +205,18 @@ main {
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
 .list-advantages {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 8px;
-  padding: 60px 15px 0;
+  gap: 24px;
+}
+
+.advantage-card {
+  width: calc((100% - 72px) / 4);
 }
 
 .our-team-section {
@@ -225,11 +239,12 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
-  padding: 72px 15px 0;
+  row-gap: 48px;
 }
 
 .team-card {
   width: calc((100% - 72px) / 4);
+  border-radius: 0 0 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background-color: #ffffff;
@@ -237,7 +252,7 @@ main {
 }
 
 .staff {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 
 .our-work {
@@ -255,11 +270,12 @@ main {
 .site-footer {
   background-color: #2e2f42;
   color: #f4f4fd;
+  padding: 100px 0;
 }
 
-.footer-content {
-  width: 26%;
-  padding: 100px 15px;
+.footer-content a {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer-color-text-logo {
@@ -267,5 +283,5 @@ main {
 }
 
 .footer-text {
-  padding-top: 16px;
+  max-width: 264px;
 }
