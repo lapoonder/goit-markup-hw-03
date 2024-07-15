@@ -45,6 +45,8 @@ a {
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
+  white-space: nowrap;
+  clip-path: inset(100%);
 }
 
 body {
@@ -64,7 +66,7 @@ body {
 }
 
 .container {
-  max-width: 1158px;
+  width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -239,6 +241,9 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
+}
+
+.list-portfolio {
   row-gap: 48px;
 }
 
